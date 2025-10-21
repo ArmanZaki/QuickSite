@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Owner Signup — QuickSite</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body data-page="signup-owner">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header header--simple">
+    <nav class="nav container">
+      <a class="logo" href="./">QuickSite</a>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <section class="section">
+      <div class="container container--narrow">
+        <h1>Sign up as Business Owner</h1>
+        <form id="owner-signup-form" class="form card" novalidate>
+          <div class="grid grid--2">
+            <div class="form__field">
+              <label for="owner-name">Owner name</label>
+              <input id="owner-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form__field">
+              <label for="owner-shop">Shop name</label>
+              <input id="owner-shop" name="shopName" type="text" required />
+            </div>
+            <div class="form__field">
+              <label for="owner-email">Email</label>
+              <input id="owner-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="form__field">
+              <label for="owner-phone">Phone</label>
+              <input id="owner-phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="form__field">
+              <label for="owner-category">Category</label>
+              <input id="owner-category" name="category" type="text" placeholder="e.g., Cafe, Boutique, Services" />
+            </div>
+            <div class="form__field password-field">
+              <label for="owner-password">Password</label>
+              <input id="owner-password" name="password" type="password" autocomplete="new-password" required minlength="8" />
+              <button type="button" class="password-toggle" aria-label="Toggle password visibility" data-toggle-password="#owner-password">Show</button>
+            </div>
+          </div>
+
+          <div class="form__field">
+            <label>Location</label>
+            <p class="muted">Pick your shop location on the map.</p>
+            <!-- Map placeholder. To enable Leaflet, include its CSS/JS in the page or via map.js dynamic loader. -->
+            <div id="map" class="map" role="application" aria-label="Map location picker"></div>
+            <div class="grid grid--2">
+              <div class="form__field">
+                <label for="latitude">Latitude</label>
+                <input id="latitude" name="latitude" type="text" inputmode="decimal" readonly />
+              </div>
+              <div class="form__field">
+                <label for="longitude">Longitude</label>
+                <input id="longitude" name="longitude" type="text" inputmode="decimal" readonly />
+              </div>
+            </div>
+          </div>
+
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit" id="owner-submit">Create Account</button>
+            <div class="spinner" hidden aria-hidden="true"></div>
+          </div>
+          <p class="form__error" id="owner-error" role="alert" hidden></p>
+          <p class="form__success" id="owner-success" role="status" hidden>
+            Account created! Check your email for an OTP to verify.
+          </p>
+          <!-- Integration note: after successful signup, call /api/auth/verify-otp with { email, otp } -->
+        </form>
+
+        <p class="muted">Already have an account? <a href="./login.html">Log in</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./assets/js/map.js"></script>
+  <script type="module" src="./assets/js/auth.js"></script>
+</body>
+</html>

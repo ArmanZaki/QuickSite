@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QuickSite — Students × Local Businesses</title>
+  <meta name="description" content="QuickSite connects verified students with local businesses for affordable, trustworthy services." />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="preload" href="./assets/css/styles.css" as="style" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" role="banner">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="./">QuickSite</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">☰</button>
+      <ul id="nav-menu" class="nav__menu" role="menubar">
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#how">How It Works</a></li>
+        <li role="none"><a role="menuitem" href="#faqs">FAQs</a></li>
+        <li role="none"><a role="menuitem" href="#reviews">Reviews</a></li>
+        <li role="none"><a role="menuitem" href="./login.html">Login</a></li>
+        <li role="none"><a role="menuitem" class="btn btn--small btn--primary" href="#signup">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="main" tabindex="-1">
+    <section class="hero" id="about" aria-labelledby="hero-heading">
+      <div class="container hero__content">
+        <h1 id="hero-heading">Hyperlocal projects by students, for local businesses</h1>
+        <p class="lead">Verified students offer affordable, trustworthy services to nearby shop owners — building real experience and community impact.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--lg" href="./signup-student.html">I'm a Student</a>
+          <a class="btn btn--outline btn--lg" href="./signup-owner.html">I'm a Business Owner</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how" aria-labelledby="how-heading">
+      <div class="container">
+        <h2 id="how-heading" class="section__title">How It Works</h2>
+
+        <div class="tabs" role="tablist" aria-label="How it works tabs">
+          <button class="tabs__tab" role="tab" aria-selected="true" aria-controls="how-student" id="tab-student">Student</button>
+          <button class="tabs__tab" role="tab" aria-selected="false" aria-controls="how-owner" id="tab-owner">Business Owner</button>
+        </div>
+
+        <div class="tabs__panels">
+          <div id="how-student" class="tabs__panel" role="tabpanel" aria-labelledby="tab-student">
+            <ol class="steps">
+              <li>Create a profile with your skills and college email</li>
+              <li>Browse local jobs and apply</li>
+              <li>Chat, collaborate, and deliver</li>
+              <li>Get reviewed and build your portfolio</li>
+            </ol>
+          </div>
+          <div id="how-owner" class="tabs__panel is-hidden" role="tabpanel" aria-labelledby="tab-owner" hidden>
+            <ol class="steps">
+              <li>Post a job with budget and location</li>
+              <li>Review applicants and pick a student</li>
+              <li>Collaborate via chat and confirm completion</li>
+              <li>Rate your experience and rehire</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="benefits-heading">
+      <div class="container">
+        <h2 id="benefits-heading" class="section__title">Why QuickSite</h2>
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>Trust-based & Local</h3>
+            <p>Verified students and proximity-first matching build confidence for owners.</p>
+          </article>
+          <article class="card">
+            <h3>Affordable & Fair</h3>
+            <p>Student-friendly pricing with transparent expectations and outcomes.</p>
+          </article>
+          <article class="card">
+            <h3>Real Experience</h3>
+            <p>Students gain portfolio-worthy work and reviews from local clients.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faqs" aria-labelledby="faqs-heading">
+      <div class="container">
+        <h2 id="faqs-heading" class="section__title">FAQs</h2>
+        <div class="accordion" data-accordion>
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__button" aria-expanded="false" aria-controls="faq-panel-1" id="faq-1">Who can be a freelancer?</button>
+            </h3>
+            <div id="faq-panel-1" class="accordion__panel" role="region" aria-labelledby="faq-1" hidden>
+              <p>Only verified college students can register as freelancers on QuickSite.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__button" aria-expanded="false" aria-controls="faq-panel-2" id="faq-2">How do I verify my account?</button>
+            </h3>
+            <div id="faq-panel-2" class="accordion__panel" role="region" aria-labelledby="faq-2" hidden>
+              <p>Sign up with your college email. You'll receive an OTP to complete verification.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__button" aria-expanded="false" aria-controls="faq-panel-3" id="faq-3">What does it cost?</button>
+            </h3>
+            <div id="faq-panel-3" class="accordion__panel" role="region" aria-labelledby="faq-3" hidden>
+              <p>Students set fair rates and owners post budgets. QuickSite keeps it transparent.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <h2 id="reviews-heading" class="section__title">What people say</h2>
+        <div class="carousel" data-carousel>
+          <div class="carousel__viewport" aria-live="polite">
+            <figure class="carousel__slide is-active">
+              <blockquote>“Found a great student to revamp our menu designs. Quick and friendly!”</blockquote>
+              <figcaption>— Priya, Cafe Owner</figcaption>
+            </figure>
+            <figure class="carousel__slide">
+              <blockquote>“Built my first real-world website for a local store. Amazing experience.”</blockquote>
+              <figcaption>— Arjun, Student</figcaption>
+            </figure>
+            <figure class="carousel__slide">
+              <blockquote>“Affordable and nearby. Love the local-first approach.”</blockquote>
+              <figcaption>— Sameer, Boutique Owner</figcaption>
+            </figure>
+          </div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" data-prev aria-label="Previous review">‹</button>
+            <button class="carousel__btn" data-next aria-label="Next review">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cta" id="signup" aria-labelledby="signup-heading">
+      <div class="container">
+        <h2 id="signup-heading" class="section__title">Ready to start?</h2>
+        <p class="section__subtitle">Create an account to join QuickSite today.</p>
+        <div class="cta__buttons">
+          <a class="btn btn--primary" href="./signup-student.html">Sign up as Student</a>
+          <a class="btn btn--secondary" href="./signup-owner.html">Sign up as Owner</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <div>
+        <strong>QuickSite</strong>
+        <p class="muted">Connecting students and local businesses.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer__links">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">@quicksite</a></li>
+        </ul>
+      </nav>
+      <p class="muted">© <span id="year"></span> QuickSite</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js" defer></script>
+</body>
+</html>

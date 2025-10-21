@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Signup — QuickSite</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body data-page="signup-student">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header header--simple">
+    <nav class="nav container">
+      <a class="logo" href="./">QuickSite</a>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <section class="section">
+      <div class="container container--narrow">
+        <h1>Sign up as Student</h1>
+        <form id="student-signup-form" class="form card" novalidate>
+          <div class="grid grid--2">
+            <div class="form__field">
+              <label for="student-name">Full name</label>
+              <input id="student-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form__field">
+              <label for="student-email">Email</label>
+              <input id="student-email" name="email" type="email" autocomplete="email" required />
+              <small class="muted">Use your college email (e.g., .edu, .ac.in)</small>
+            </div>
+            <div class="form__field">
+              <label for="student-phone">Phone</label>
+              <input id="student-phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="form__field">
+              <label for="student-college">College name</label>
+              <input id="student-college" name="college" type="text" required />
+            </div>
+            <div class="form__field">
+              <label for="student-city">City</label>
+              <input id="student-city" name="city" type="text" />
+            </div>
+            <div class="form__field password-field">
+              <label for="student-password">Password</label>
+              <input id="student-password" name="password" type="password" autocomplete="new-password" required minlength="8" />
+              <button type="button" class="password-toggle" aria-label="Toggle password visibility" data-toggle-password="#student-password">Show</button>
+              <small id="password-strength" class="muted">Must be at least 8 characters.</small>
+            </div>
+            <div class="form__field">
+              <label for="student-confirm-password">Confirm password</label>
+              <input id="student-confirm-password" name="confirmPassword" type="password" autocomplete="new-password" required />
+            </div>
+          </div>
+
+          <div class="form__field">
+            <label>Skills</label>
+            <div class="tags" data-tags data-name="skills">
+              <input class="tags__input" type="text" aria-label="Add skill and press Enter" placeholder="Add a skill and press Enter" />
+            </div>
+          </div>
+
+          <div class="form__field form__checkbox">
+            <input id="student-terms" name="terms" type="checkbox" required />
+            <label for="student-terms">I agree to the Terms and consent to verification</label>
+          </div>
+
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit" id="student-submit">Create Account</button>
+            <div class="spinner" hidden aria-hidden="true"></div>
+          </div>
+          <p class="form__error" id="student-error" role="alert" hidden></p>
+          <p class="form__success" id="student-success" role="status" hidden>
+            Account created! Check your email for an OTP to verify.
+          </p>
+          <!-- Integration note: after successful signup, call /api/auth/verify-otp with { email, otp } -->
+        </form>
+
+        <p class="muted">Already have an account? <a href="./login.html">Log in</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./assets/js/auth.js"></script>
+</body>
+</html>
