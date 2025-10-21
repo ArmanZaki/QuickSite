@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Dashboard — QuickSite (Placeholder)</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="header header--simple">
+    <nav class="nav container">
+      <a class="logo" href="../">QuickSite</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <h1>Student Dashboard (Placeholder)</h1>
+        <p>Welcome! This is a placeholder. After login, you'll land here if your role is <code>student</code>.</p>
+        <ul class="list">
+          <li>Find Jobs</li>
+          <li>Applied Jobs</li>
+          <li>Messages</li>
+          <li>Profile</li>
+          <li>Settings</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Placeholder: ensure JWT exists, else redirect to login
+    const token = localStorage.getItem('quicksite_token');
+    if (!token) { window.location.href = '../login.html'; }
+  </script>
+</body>
+</html>

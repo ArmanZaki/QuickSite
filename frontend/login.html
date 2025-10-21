@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login — QuickSite</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body data-page="login">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header header--simple">
+    <nav class="nav container">
+      <a class="logo" href="./">QuickSite</a>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <section class="section">
+      <div class="container container--narrow">
+        <h1>Login</h1>
+        <form id="login-form" class="form card" aria-describedby="login-help">
+          <div class="form__field">
+            <label for="login-email">Email</label>
+            <input id="login-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="form__field password-field">
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+            <button type="button" class="password-toggle" aria-label="Toggle password visibility" data-toggle-password="#login-password">Show</button>
+          </div>
+          <p id="login-help" class="muted">On success, you'll be redirected based on your role.</p>
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit" id="login-submit">Login</button>
+            <div class="spinner" hidden aria-hidden="true"></div>
+          </div>
+          <p class="form__error" id="login-error" role="alert" hidden></p>
+        </form>
+        <p class="muted">Don't have an account? <a href="./signup-student.html">Sign up</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./assets/js/auth.js"></script>
+</body>
+</html>
